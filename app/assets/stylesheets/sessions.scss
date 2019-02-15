@@ -1,0 +1,97 @@
+// Place all the styles related to the Session controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.site_title {
+  margin-bottom: 10px;
+}
+
+body {
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.new_reset{
+  color: #42a69a;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.new_reset a {
+  color: white;
+}
+
+.login-form {
+  padding: 10px;
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	background: #80808057;
+  opacity: 1;
+}
+
+.signup-form {
+  padding: 10px;
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	background: #80808057;
+  opacity: 1;
+}
+
+.input-lg {
+	color: black !important;
+}
+
+form[role=login] {
+	color: #5d5d5d;
+	background: #f2f2f2;
+	padding: 26px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+	form[role=login] img {
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 35px;
+	}
+	form[role=login] input,
+	form[role=login] button {
+		font-size: 18px;
+		margin: 16px 0;
+	}
+	form[role=login] > div {
+		text-align: center;
+	}
+
+.form-links {
+	text-align: center;
+	margin-top: 1em;
+	margin-bottom: 50px;
+}
+.form-links a {
+	color: #fff;
+}
+
+#registerForm {
+	background: url(http://i.imgur.com/GHr12sH.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+/*login*/
+.login-content{
+	height: 100vh;
+	background: image-url("bgLogin.png") center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+}
+.new_reset a:hover{
+	color: #fff;
+}
+.login-form h4, .signup-form h4{
+	text-align: center;
+}
+/*signup*/

@@ -1,0 +1,31 @@
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body class="bgSignup">
+<div class="col-md-12 login-content">
+  <div class="container">
+    <div class="row" id="pwd-container">
+      <div class="col-md-4"></div>
+      <div class="col-md-4 log-content">
+        <section class="login-form" style="background-color: aliceblue;">
+          <%= form_for(:session, :url => login_path, :html => {:class => 'form-horizontal form-label-left'}) do |f| %>
+            <h4><a href="#" class="site_title"><label class="bt-logo-light"></a></h4>
+            <%= render 'partials/notification' %>
+            <%= f.text_field :email, class:'form-control input-lg', placeholder:'Email', 'required' => 'required'%>
+            <%= f.password_field :password, class:'form-control input-lg', required: 'require', placeholder: 'Password' %>
+            <div class="pwstrength_viewport_progress"></div>
+            <%= f.submit "Login", class:'btn btn-lg btn-primary btn-block' %>
+            <div class="new_reset">
+              <%= link_to "Sign Up", signup_path, {:style=>'color:cadetblue;'}%>
+            </div>
+          <% end %>
+          <div class="form-links">
+          </div>
+        </section>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+  </div>
+</div>  
+</body>

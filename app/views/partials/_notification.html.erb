@@ -1,0 +1,18 @@
+<% if flash[:success] %>
+    <div class="alert alert-success alert-dismissible fade in" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+      <strong><%=h flash[:success] %></strong>
+    </div>
+<% elsif flash[:error] %>
+    <div class="alert alert-danger alert-dismissible fade in" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+      </button>
+      <%= flash[:error].html_safe  %>
+    </div>
+<% elsif flash[:userInfo] && controller.controller_name == "orders" %>
+    <div class="alert alert-danger alert-dismissible fade in" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span>
+      </button>
+      <%= flash[:userInfo].html_safe  %>
+    </div>
+<% end %>

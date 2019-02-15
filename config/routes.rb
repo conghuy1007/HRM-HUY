@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
+  get     "login"    => "sessions#new"
+  post    "login"    => "sessions#create"
+  delete  "logout"   => "sessions#destroy"
+  get     "index"    => "plainpage#index"
+  resource :users
+  get '/signup' => 'users#new', :as => 'signup'
+  root to: "sessions#new", id: 'login'
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'plainpage#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
